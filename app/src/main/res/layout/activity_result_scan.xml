@@ -1,0 +1,60 @@
+<?xml version="1.0" encoding="utf-8"?>
+<androidx.constraintlayout.widget.ConstraintLayout xmlns:android="http://schemas.android.com/apk/res/android"
+                                                   xmlns:app="http://schemas.android.com/apk/res-auto"
+                                                   xmlns:tools="http://schemas.android.com/tools" android:orientation="vertical"
+                                                   android:layout_width="match_parent"
+                                                   android:layout_height="match_parent">
+
+    <androidx.recyclerview.widget.RecyclerView
+        android:id="@+id/productsRecyclerView"
+        android:layout_width="0dp"
+        android:layout_height="0dp"
+        app:layout_constraintStart_toStartOf="parent"
+        app:layout_constraintTop_toTopOf="parent"
+        app:layout_constraintEnd_toEndOf="parent"
+        app:layout_constraintBottom_toTopOf="@+id/productsSaveButton"
+        />
+
+    <Button
+        tools:text="再度読み込む"
+        android:text="再度読み込む"
+        android:id="@+id/scanRetryButton"
+        android:layout_width="0dp"
+        android:layout_height="wrap_content"
+        app:layout_constraintHorizontal_weight="1"
+        app:layout_constraintStart_toStartOf="parent"
+        app:layout_constraintTop_toBottomOf="@+id/productsRecyclerView"
+        app:layout_constraintEnd_toStartOf="@+id/productsSaveButton"
+        app:layout_constraintBottom_toBottomOf="parent"
+        />
+
+    <Button
+        tools:text="保存"
+        android:text="保存"
+        android:id="@+id/productsSaveButton"
+        android:layout_width="0dp"
+        android:layout_height="wrap_content"
+        app:layout_constraintHorizontal_weight="1"
+        app:layout_constraintStart_toEndOf="@+id/scanRetryButton"
+        app:layout_constraintTop_toTopOf="@+id/scanRetryButton"
+        app:layout_constraintEnd_toEndOf="parent"
+        app:layout_constraintBottom_toBottomOf="@+id/scanRetryButton"
+        />
+
+
+    <com.example.receipt.receipt.presentation.common.StateView
+        android:id="@+id/stateView"
+        android:layout_width="0dp"
+        android:layout_height="0dp"
+        app:layout_constraintTop_toTopOf="parent"
+        app:layout_constraintStart_toStartOf="parent"
+        app:layout_constraintEnd_toEndOf="parent"
+        app:layout_constraintBottom_toBottomOf="parent"/>
+
+    <androidx.constraintlayout.widget.Group
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:id="@+id/contentGroup"
+        app:constraint_referenced_ids="productsRecyclerView,scanRetryButton,productsSaveButton"/>
+
+</androidx.constraintlayout.widget.ConstraintLayout>

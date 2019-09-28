@@ -1,0 +1,92 @@
+<?xml version="1.0" encoding="utf-8"?>
+<merge xmlns:android="http://schemas.android.com/apk/res/android"
+    xmlns:app="http://schemas.android.com/apk/res-auto"
+    xmlns:tools="http://schemas.android.com/tools"
+    android:layout_width="match_parent"
+    android:layout_height="match_parent"
+    tools:parentTag="androidx.constraintlayout.widget.ConstraintLayout"
+    >
+
+    <ProgressBar
+        android:id="@+id/progressBar"
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:indeterminate="true"
+        android:indeterminateTintMode="src_in"
+        android:indeterminateTint="@color/colorPrimary"
+        android:visibility="invisible"
+        tools:visibility="visible"
+        app:layout_constraintTop_toTopOf="parent"
+        app:layout_constraintStart_toStartOf="parent"
+        app:layout_constraintEnd_toEndOf="parent"
+        app:layout_constraintBottom_toTopOf="@+id/progressMessageTextView"
+        app:layout_constraintVertical_chainStyle="packed"
+        />
+
+    <TextView
+        android:id="@+id/progressMessageTextView"
+        android:layout_width="0dp"
+        android:layout_height="wrap_content"
+        android:textAlignment="center"
+        android:typeface="monospace"
+        android:visibility="gone"
+        android:layout_marginTop="24dp"
+        app:layout_constraintBottom_toBottomOf="parent"
+        app:layout_constraintEnd_toEndOf="parent"
+        app:layout_constraintStart_toStartOf="parent"
+        app:layout_constraintTop_toBottomOf="@+id/progressBar"
+        app:layout_constraintWidth_percent="0.8"
+        tools:text="Text"
+        tools:visibility="visible"
+        />
+
+    <TextView
+        android:id="@+id/titleTextView"
+        android:layout_width="0dp"
+        android:layout_height="wrap_content"
+
+        android:layout_marginBottom="70dp"
+        android:textAlignment="center"
+        android:textAllCaps="false"
+        android:textColor="#000"
+        android:textSize="17sp"
+        android:textStyle="bold"
+        app:layout_constraintBottom_toTopOf="@id/messageTextView"
+        app:layout_constraintEnd_toEndOf="parent"
+        app:layout_constraintStart_toStartOf="parent"
+        app:layout_constraintTop_toTopOf="parent"
+        app:layout_constraintVertical_chainStyle="packed"
+        app:layout_constraintWidth_percent="0.8"
+        tools:text="読み込みエラー"
+        />
+
+    <TextView
+        android:id="@+id/messageTextView"
+        android:layout_width="0dp"
+        android:layout_height="wrap_content"
+        android:layout_marginBottom="39dp"
+        android:textAlignment="center"
+        android:typeface="monospace"
+        app:layout_constraintBottom_toTopOf="@id/retryButton"
+        app:layout_constraintEnd_toEndOf="parent"
+        app:layout_constraintStart_toStartOf="parent"
+        app:layout_constraintTop_toBottomOf="@id/titleTextView"
+        app:layout_constraintWidth_percent="0.9"
+        tools:text="通信環境をご確認の上再読み込みをしてください。"
+        />
+
+    <com.google.android.material.button.MaterialButton
+        android:id="@+id/retryButton"
+        android:visibility="gone"
+        android:layout_width="0dp"
+        android:layout_height="wrap_content"
+        android:text="再読み込み"
+        style="@style/Widget.AppTheme.Button.OutlinedButton.Icon.White"
+        app:layout_constraintBottom_toBottomOf="parent"
+        app:layout_constraintEnd_toEndOf="parent"
+        app:layout_constraintStart_toStartOf="parent"
+        app:layout_constraintTop_toBottomOf="@+id/messageTextView"
+        app:layout_constraintWidth_percent="0.6"
+        />
+
+</merge>

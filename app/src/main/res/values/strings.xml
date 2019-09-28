@@ -1,0 +1,5 @@
+<resources>
+    <string name="app_name">receipt</string>
+    <string name="launch_camera">レシートをスキャンする</string>
+    <string name="send_photo">自動で読み取る</string>
+</resources>
