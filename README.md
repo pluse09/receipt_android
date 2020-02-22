@@ -2,5 +2,5 @@
 
 [Flask Ver](https://github.com/pluse09/receipt_flask)
 
-Android(User) &lt;---> Flask(API) &lt;---> GoogleCloudVision 
-![](https://user-images.githubusercontent.com/25924884/65821699-21a42500-e274-11e9-84f5-e86670d9bb9f.png)
+
+![](https://user-images.githubusercontent.com/25924884/75088533-f78c3000-5591-11ea-8b09-27a29b79bb62.png)
